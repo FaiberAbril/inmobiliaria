@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>inicio</title>
+	<title>INICIO</title>
 
 	<!-- Custom fonts for this template-->
 	<link th:href="@{/vendor/fontawesome-free/css/all.min.css}" rel="stylesheet" type="text/css">
@@ -35,11 +35,11 @@
 				<div class="sidebar-brand-icon">
 					<img th:src="@{/img/Logo2.png}" class="img-fluid" width="69%">
 				</div>
-				<div class="sidebar-brand-text mx-3"></div>
+				<div class="sidebar-brand-text mx-0"></div>
 			</a>
 
 			<!-- Divider -->
-			<hr class="sidebar-divider my-0">
+			<hr class="sidebar-divider my-1">
 
 			<!-- Nav Item - Dashboard -->
 			<li class="nav-item active">
@@ -238,22 +238,47 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		
-			<!-- Area Chart -->
 
-
-			<!--Footer-->
-			<footer class="sticky-footer bg-white">
-				<div class="container my-auto">
-					<div class="copyright text-center my-auto">
-						<span>Copyright; MR 2023</span>
+				<!-- Area Chart -->
+				<div class="container mt-5">
+					<div id="carouselExample" class="carousel slider" data-bs-ride="carousel">
+						<div class="carousel-inner">
+							
+						
+							<div 	th:each="Publicacion:${listarPublic}" class="carousel-item"
+								th:classappend="${Publicacion.listarPublic == 0} ? 'active'">
+								<img th:src="@{/imagenes/}+${Publicacion.Imagen}"
+									class="bd-placeholder-img rounded img-fluid"
+									th:alt="${'Imagen' + listarPublic }">
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+							data-bs-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">ANTERIOR</span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+							data-bs-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="visually-hidden">SIGUIENTE</span>
+						</button>
 					</div>
 				</div>
-			</footer>
-			<!-- End of Footer -->
-		</div>
-		<!-- End of Content Wrapper -->
+			</div>
+
+		<!--Footer-->
+		<footer class="sticky-footer bg-white">
+			<div class="container my-auto">
+				<div class="copyright text-center my-auto">
+					<span>Copyright; MR 2023</span>
+				</div>
+			</div>
+		</footer>
+		<!-- End of Footer -->
+	</div>
+	</div>
+	
+	<!-- End of Content Wrapper -->
 	</div>
 	<!-- End of Page Wrapper -->
 	<!-- Scroll to Top Button-->
@@ -282,6 +307,7 @@
 		</div>
 	</div>
 	</div>
+
 
 	<!-- Bootstrap core JavaScript-->
 	<script th:src="@{/vendor/jquery/jquery.min.js}"></script>
