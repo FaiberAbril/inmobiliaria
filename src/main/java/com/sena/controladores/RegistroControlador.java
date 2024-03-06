@@ -1,7 +1,6 @@
 package com.sena.controladores;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,7 +29,7 @@ public class RegistroControlador {
 		model.addAttribute("listarPublic", publicServicio.listarPublicaciones());
 		return "habitaciones";
 	}
-	
+
 	@GetMapping("/apartamentos")
 	public String apartamentos(Model model) {
 		model.addAttribute("listarPublic", publicServicio.listarPublicaciones());
