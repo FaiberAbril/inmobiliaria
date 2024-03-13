@@ -11,5 +11,5 @@ public class inicioControlador {
 		public String inicio () {
 			return "inicio";
 		}
-
+  
 }

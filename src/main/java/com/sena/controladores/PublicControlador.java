@@ -30,8 +30,8 @@ import com.sena.servicio.publicServicio;
 @RequestMapping("/PublicControlador")
 public class PublicControlador {
 
-	List<String> tipoLugar = new ArrayList<String>(
-			Arrays.asList("CASAS","HABITACIONES", "APARTAMENTOS", "LOTES", "TERRENOS", "FINCAS", "lOCALES", "OFICINAS", "EDIFICIOS")
+	List<String> tipoLugar = new ArrayList<String>(Arrays.asList("CASAS", "HABITACIONES", "APARTAMENTOS", "LOTES",
+			"TERRENOS", "FINCAS", "lOCALES", "OFICINAS", "EDIFICIOS")
 
 	);
 
@@ -39,6 +39,11 @@ public class PublicControlador {
 
 	@Autowired
 	private publicServicio publicServicio;
+	
+	@GetMapping("/inicio/controlador")
+	public long controlador() {
+		return publicServicio.count(1);
+	}
 
 	@GetMapping("/")
 	public String AdministrarPubli(Model model, @Param("palabraClave") String palabraClave) {
@@ -84,85 +89,62 @@ public class PublicControlador {
 	@PostMapping("/guardar")
 	public String guardar(@Validated @ModelAttribute("ObPublic") Publicacion publicacion, BindingResult result,
 			Model model, @RequestParam("Imagen") MultipartFile imagenes, RedirectAttributes attributes,
-			@RequestParam("ImagenUno") MultipartFile ImagenUno ,@RequestParam("ImagenDos") MultipartFile ImagenDos,
+			@RequestParam("ImagenUno") MultipartFile ImagenUno, @RequestParam("ImagenDos") MultipartFile ImagenDos,
 			@RequestParam("ImagenTres") MultipartFile ImagenTres,
 			@RequestParam("ImagenCuarta") MultipartFile ImagenCuarta) {
 
-		/*
-		 * if (result.hasErrors()) { model.addAttribute("titulo", "FormuCrearpublic");
-		 * model.addAttribute("ObPublic", publicacion);
-		 * 
-		 * attributes.addFlashAttribute("advertencia",
-		 * "Existieron errores en el formulario"); return
-		 * "redirect:/PublicControlador/FormuCrearpublic"; }
-		 */
-		
-		
-		
 		publicServicio.guardar(publicacion);
-		
+
 		Path directorioimagenes = Paths.get("src//main//resources//static/imagenes");
 		String rutaAbsoluta = directorioimagenes.toFile().getAbsolutePath();
-		
 
 		if (!imagenes.isEmpty()) {
 
 			try {
 				byte[] bytesImg = imagenes.getBytes();
-				String ruta = rutaAbsoluta + "\\" + publicacion.getIdLugar()+ ".jpeg";
+				String ruta = rutaAbsoluta + "\\" + publicacion.getIdLugar() + ".jpeg";
 				Path rutaCompleta = Paths.get(ruta);
 				Files.write(rutaCompleta, bytesImg);
 
-				publicacion.setImagen(publicacion.getIdLugar()+ ".jpeg");
+				publicacion.setImagen(publicacion.getIdLugar() + ".jpeg");
 				publicServicio.ActualizarPublic(publicacion);
 
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
 
-		}else if(!ImagenUno.isEmpty() && !ImagenDos.isEmpty() && !ImagenTres.isEmpty() && !ImagenCuarta.isEmpty()) {
-			
-			try {
-					
-				
-				    byte[] bytesImg = ImagenUno.getBytes();
-					String ruta = rutaAbsoluta + "\\" + publicacion.getIdLugar()+ ".jpeg";
-					Path rutaCompleta = Paths.get(ruta);
-					Files.write(rutaCompleta, bytesImg);
+		} else if (!ImagenUno.isEmpty() && !ImagenDos.isEmpty() && !ImagenTres.isEmpty() && !ImagenCuarta.isEmpty()) {
 
-					publicacion.setImagen(publicacion.getIdLugar()+ ".jpeg");
-					publicServicio.ActualizarPublic(publicacion);
-					
-					
-					  byte[] bytesImgDos = ImagenDos.getBytes();
-					  String rutaDos = rutaAbsoluta + "\\" + "2-"+publicacion.getIdLugar()+ ".jpeg";
-					  Path rutaCompletaDos = Paths.get(rutaDos);
-					  Files.write(rutaCompletaDos, bytesImgDos);
-					  
-					  
-					  byte[] bytesImgTres = ImagenTres.getBytes();
-					  String rutaTres = rutaAbsoluta + "\\" + "3-"+publicacion.getIdLugar()+ ".jpeg";
-					  Path rutaCompletaTres = Paths.get(rutaTres);
-					  Files.write(rutaCompletaTres, bytesImgTres);
-					  
-					  byte[] bytesImgCuatro = ImagenCuarta.getBytes();
-					  String rutaCuatro = rutaAbsoluta + "\\" + "4-"+publicacion.getIdLugar()+ ".jpeg";
-					  Path rutaCompletaCuatro = Paths.get(rutaCuatro);
-					  Files.write(rutaCompletaCuatro, bytesImgCuatro);
-					
-				
-				
+			try {
+
+				byte[] bytesImg = ImagenUno.getBytes();
+				String ruta = rutaAbsoluta + "\\" + publicacion.getIdLugar() + ".jpeg";
+				Path rutaCompleta = Paths.get(ruta);
+				Files.write(rutaCompleta, bytesImg);
+
+				publicacion.setImagen(publicacion.getIdLugar() + ".jpeg");
+				publicServicio.ActualizarPublic(publicacion);
+
+				byte[] bytesImgDos = ImagenDos.getBytes();
+				String rutaDos = rutaAbsoluta + "\\" + "2-" + publicacion.getIdLugar() + ".jpeg";
+				Path rutaCompletaDos = Paths.get(rutaDos);
+				Files.write(rutaCompletaDos, bytesImgDos);
+
+				byte[] bytesImgTres = ImagenTres.getBytes();
+				String rutaTres = rutaAbsoluta + "\\" + "3-" + publicacion.getIdLugar() + ".jpeg";
+				Path rutaCompletaTres = Paths.get(rutaTres);
+				Files.write(rutaCompletaTres, bytesImgTres);
+
+				byte[] bytesImgCuatro = ImagenCuarta.getBytes();
+				String rutaCuatro = rutaAbsoluta + "\\" + "4-" + publicacion.getIdLugar() + ".jpeg";
+				Path rutaCompletaCuatro = Paths.get(rutaCuatro);
+				Files.write(rutaCompletaCuatro, bytesImgCuatro);
+
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			
-		}
-		
-		
-		
-		
-		
 
+		}
 
 		attributes.addFlashAttribute("exito", "Producto guardado con exito");
 		return "redirect:/PublicControlador/";

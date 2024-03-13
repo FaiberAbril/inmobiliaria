@@ -239,46 +239,55 @@
 					</div>
 				</div>
 
-				<!-- Area Chart -->
-				<div class="container mt-5">
-					<div id="carouselExample" class="carousel slider" data-bs-ride="carousel">
-						<div class="carousel-inner">
-							
-						
-							<div 	th:each="Publicacion:${listarPublic}" class="carousel-item"
-								th:classappend="${Publicacion.listarPublic == 0} ? 'active'">
-								<img th:src="@{/imagenes/}+${Publicacion.Imagen}"
-									class="bd-placeholder-img rounded img-fluid"
-									th:alt="${'Imagen' + listarPublic }">
-							</div>
-						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-							data-bs-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">ANTERIOR</span>
-						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-							data-bs-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">SIGUIENTE</span>
-						</button>
-					</div>
-				</div>
-			</div>
+				<!--contador-->
 
-		<!--Footer-->
-		<footer class="sticky-footer bg-white">
-			<div class="container my-auto">
-				<div class="copyright text-center my-auto">
-					<span>Copyright; MR 2023</span>
+					<h1><span th:text="${controlador}"></span>
+						<h1>
+							<!-- Area Chart -->
+							<div class="row">
+								<div class="col-md-6">
+									<div class="card-header py-3">
+										<div class="container mt-5">
+											<div id="carouselExample" class="carousel slider" data-bs-ride="carousel">
+												<div class="carousel-inner">
+
+													<div th:each="Publicacion:${listarPublic}" class="carousel-item"
+														th:classappend="${Publicacion.listarPublic==0} ? 'active'">
+														<img th:src="@{/imagenes/}+${Publicacion.listarPublic}"
+															class="bd-placeholder-img rounded img-fluid"
+															th:alt="${'Imagen'+´listarPublic´}">
+													</div>
+												</div>
+												<button class="carousel-control-prev" type="button"
+													data-bs-target="#carouselExample" data-bs-slide="prev">
+													<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+													<span class="visually-hidden">ANTERIOR</span>
+												</button>
+												<button class="carousel-control-next" type="button"
+													data-bs-target="#carouselExample" data-bs-slide="next">
+													<span class="carousel-control-next-icon" aria-hidden="true"></span>
+													<span class="visually-hidden">SIGUIENTE</span>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 				</div>
+
+				<!--Footer-->
+				<footer class="sticky-footer bg-white">
+					<div class="container my-auto">
+						<div class="copyright text-center my-auto">
+							<span>Copyright; MR 2023</span>
+						</div>
+					</div>
+				</footer>
+				<!-- End of Footer -->
 			</div>
-		</footer>
-		<!-- End of Footer -->
-	</div>
-	</div>
-	
-	<!-- End of Content Wrapper -->
+		</div>
+
+		<!-- End of Content Wrapper -->
 	</div>
 	<!-- End of Page Wrapper -->
 	<!-- Scroll to Top Button-->

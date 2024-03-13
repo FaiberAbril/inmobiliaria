@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.sena.modelo.Publicacion;
-
 import com.sena.repository.PublicRepository;
 
 @Service
@@ -23,14 +22,13 @@ public class publicServicio {
 	}
 
 	public List<Publicacion> listAll(String palabraClave) {
-		if(palabraClave != null) {
+		if (palabraClave != null) {
 			return publicRepository.findAll(palabraClave);
 		}
 		return publicRepository.findAll();
 	}
-	
-	
-	public List<Publicacion> listarPublicaciones(){
+
+	public List<Publicacion> listarPublicaciones() {
 		return publicRepository.findAll();
 	}
 
@@ -44,12 +42,12 @@ public class publicServicio {
 
 	public void guardar(Publicacion publicacion) {
 		publicRepository.save(publicacion);
-		
-		
+
 	}
-	
-	
 
-
+	public Long count(int controlador) {
+		controlador++;
+		return publicRepository.count();
+	}
 
 }
