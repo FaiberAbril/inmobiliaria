@@ -40,11 +40,6 @@ public class PublicControlador {
 	@Autowired
 	private publicServicio publicServicio;
 	
-	@GetMapping("/inicio/controlador")
-	public long controlador() {
-		return publicServicio.count(1);
-	}
-
 	@GetMapping("/")
 	public String AdministrarPubli(Model model, @Param("palabraClave") String palabraClave) {
 		List<Publicacion> Listapublica = publicServicio.listAll(palabraClave);
@@ -149,5 +144,8 @@ public class PublicControlador {
 		attributes.addFlashAttribute("exito", "Producto guardado con exito");
 		return "redirect:/PublicControlador/";
 	}
+
+	
+	
 
 }
