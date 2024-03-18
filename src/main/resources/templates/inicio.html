@@ -239,265 +239,274 @@
 
 						<!--contador-->
 						<div class="col-xl-3 col-md-6 mb-4">
-							<div class="card border-left-primary shadow h-100 py-2">
-								<div class="card-body">
-									<div class="row no-gutters align-items-center">
-										<div class="col mr-2">
-											<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
-												#PUBLICACIONES DE LA PÁGINA
+								<div class="card border-left-primary shadow h-100 py-2">
+									<div class="card-body">
+										<div class="row no-gutters align-items-center">
+											<div class="col mr-2">
+												<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
+													#PUBLICACIONES DE LA PÁGINA
+												</div>
 											</div>
-										</div>
-										<div class="col-auto">
-											<a th:text="${totalPublicaciones}"></a>
-											<div class="progress progress-sm mr-2">
-												<div class="progress-bar bg-info" role="progressbar" style="width: 50%"
-													aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+											<div class="col-auto">
+												<a th:text="${totalPublicacionesCasas}" class="h5 mb-0 mr-3 font-weight-bold text-gray-1100"></a>
+												<div class="progress progress-sm mr-2">
+													<div class="progress-bar bg-info" role="progressbar"
+														style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100"></div>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+
+							<div class="col-xl-3 col-md-6 mb-4">
+								<div class="card border-left-primary shadow h-100 py-2">
+									<div class="card-body">
+										<div class="row no-gutters align-items-center">
+											<div class="col mr-2">
+												<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
+													CASAS
+												</div>
+											</div>
+											<div class="col-auto">
+												<a th:text="${totalPublicacionesCasas}" class="h5 mb-0 mr-3 font-weight-bold text-gray-1100"></a>
+												<div class="progress progress-sm mr-2">
+													<div class="progress-bar bg-info" role="progressbar"
+														style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xl-3 col-md-6 mb-4">
+								<div class="card border-left-primary shadow h-100 py-2">
+									<div class="card-body">
+										<div class="row no-gutters align-items-center">
+											<div class="col mr-2">
+												<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
+													HABITACIONES
+												</div>
+											</div>
+											<div class="col-auto">
+												<a th:text="${totalPublicacionesHabitaciones}" class="h5 mb-0 mr-3 font-weight-bold text-gray-1100"></a>
+												<div class="progress progress-sm mr-2">
+													<div class="progress-bar bg-info" role="progressbar"
+														style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xl-3 col-md-6 mb-4">
+								<div class="card border-left-primary shadow h-100 py-2">
+									<div class="card-body">
+										<div class="row no-gutters align-items-center">
+											<div class="col mr-2">
+												<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
+													APARTAMENTOS
+												</div>
+											</div>
+											<div class="col-auto">
+												<a th:text="${totalPublicacionesApartamentos}" class="h5 mb-0 mr-3 font-weight-bold text-gray-1100"></a>
+												<div class="progress progress-sm mr-2">
+													<div class="progress-bar bg-info" role="progressbar"
+														style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xl-3 col-md-6 mb-4">
+								<div class="card border-left-primary shadow h-100 py-2">
+									<div class="card-body">
+										<div class="row no-gutters align-items-center">
+											<div class="col mr-2">
+												<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
+													LOTES
+												</div>
+											</div>
+											<div class="col-auto">
+												<a th:text="${totalPublicacionesLotes}" class="h5 mb-0 mr-3 font-weight-bold text-gray-1100"></a>
+												<div class="progress progress-sm mr-2">
+													<div class="progress-bar bg-info" role="progressbar"
+														style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xl-3 col-md-6 mb-4">
+								<div class="card border-left-primary shadow h-100 py-2">
+									<div class="card-body">
+										<div class="row no-gutters align-items-center">
+											<div class="col mr-2">
+												<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
+													TERRENOS
+												</div>
+											</div>
+											<div class="col-auto">
+												<a th:text="${totalPublicacionesTerrenos}" class="h5 mb-0 mr-3 font-weight-bold text-gray-1100"></a>
+												<div class="progress progress-sm mr-2">
+													<div class="progress-bar bg-info" role="progressbar"
+														style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xl-3 col-md-6 mb-4">
+								<div class="card border-left-primary shadow h-100 py-2">
+									<div class="card-body">
+										<div class="row no-gutters align-items-center">
+											<div class="col mr-2">
+												<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
+													FINCAS
+												</div>
+											</div>
+											<div class="col-auto">
+												<a th:text="${totalPublicacionesFincas}" class="h5 mb-0 mr-3 font-weight-bold text-gray-1100"></a>
+												<div class="progress progress-sm mr-2">
+													<div class="progress-bar bg-info" role="progressbar"
+														style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xl-3 col-md-6 mb-4">
+								<div class="card border-left-primary shadow h-100 py-2">
+									<div class="card-body">
+										<div class="row no-gutters align-items-center">
+											<div class="col mr-2">
+												<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
+													LOCALES
+												</div>
+											</div>
+											<div class="col-auto">
+												<a th:text="${totalPublicacionesLocales}" class="h5 mb-0 mr-3 font-weight-bold text-gray-1100"></a>
+												<div class="progress progress-sm mr-2">
+													<div class="progress-bar bg-info" role="progressbar"
+														style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xl-3 col-md-6 mb-4">
+								<div class="card border-left-primary shadow h-100 py-2">
+									<div class="card-body">
+										<div class="row no-gutters align-items-center">
+											<div class="col mr-2">
+												<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
+													OFICINAS
+												</div>
+											</div>
+											<div class="col-auto">
+												<a th:text="${totalPublicacionesOficinas}" class="h5 mb-0 mr-3 font-weight-bold text-gray-1100"></a>
+												<div class="progress progress-sm mr-2">
+													<div class="progress-bar bg-info" role="progressbar"
+														style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-xl-3 col-md-6 mb-4">
+								<div class="card border-left-primary shadow h-100 py-2">
+									<div class="card-body">
+										<div class="row no-gutters align-items-center">
+											<div class="col mr-2">
+												<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
+													EDIFICIOS
+												</div>
+											</div>
+											<div class="col-auto">
+												<a th:text="${totalPublicacionesEdificios}" class="h5 mb-0 mr-3 font-weight-bold text-gray-1100"></a>
+												<div class="progress progress-sm mr-2">
+													<div class="progress-bar bg-info" role="progressbar"
+														style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100"></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
 						</div>
 
-						<div class="col-xl-3 col-md-6 mb-4">
-							<div class="card border-left-primary shadow h-100 py-2">
-								<div class="card-body">
-									<div class="row no-gutters align-items-center">
-										<div class="col mr-2">
-											<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
-												CASAS
-											</div>
-										</div>
-										<div class="col-auto">
-											<a th:text="${totalPublicacionesCasas}"></a>
-											<div class="progress progress-sm mr-2">
-												<div class="progress-bar bg-info" role="progressbar" style="width: 50%"
-													aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</div>
-									</div>
+						<!-- Area Chart -->
+						<div id="carouselExample" class="carousel slide">
+							<div class="carousel-inner">
+								<div class="carousel-item active" th:each="Publicacion:${listarPublic}">
+									<img th:src="@{/imagenes/}+${Publicacion.Imagen}" alt="img"
+										class="bd-placeholder-img rounded img-fluid d-block w-100">
 								</div>
 							</div>
+							<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+								data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Anterior</span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+								data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Siguiente</span>
+							</button>
 						</div>
 
-						<div class="col-xl-3 col-md-6 mb-4">
-							<div class="card border-left-primary shadow h-100 py-2">
-								<div class="card-body">
-									<div class="row no-gutters align-items-center">
-										<div class="col mr-2">
-											<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
-												HABITACIONES
-											</div>
-										</div>
-										<div class="col-auto">
-											<a th:text="${totalPublicacionesHabitaciones}"></a>
-											<div class="progress progress-sm mr-2">
-												<div class="progress-bar bg-info" role="progressbar" style="width: 50%"
-													aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xl-3 col-md-6 mb-4">
-							<div class="card border-left-primary shadow h-100 py-2">
-								<div class="card-body">
-									<div class="row no-gutters align-items-center">
-										<div class="col mr-2">
-											<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
-												APARTAMENTOS
-											</div>
-										</div>
-										<div class="col-auto">
-											<a th:text="${totalPublicacionesApartamentos}"></a>
-											<div class="progress progress-sm mr-2">
-												<div class="progress-bar bg-info" role="progressbar" style="width: 50%"
-													aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xl-3 col-md-6 mb-4">
-							<div class="card border-left-primary shadow h-100 py-2">
-								<div class="card-body">
-									<div class="row no-gutters align-items-center">
-										<div class="col mr-2">
-											<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
-												LOTES
-											</div>
-										</div>
-										<div class="col-auto">
-											<a th:text="${totalPublicacionesLotes}"></a>
-											<div class="progress progress-sm mr-2">
-												<div class="progress-bar bg-info" role="progressbar" style="width: 50%"
-													aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xl-3 col-md-6 mb-4">
-							<div class="card border-left-primary shadow h-100 py-2">
-								<div class="card-body">
-									<div class="row no-gutters align-items-center">
-										<div class="col mr-2">
-											<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
-												TERRENOS
-											</div>
-										</div>
-										<div class="col-auto">
-											<a th:text="${totalPublicacionesTerrenos}"></a>
-											<div class="progress progress-sm mr-2">
-												<div class="progress-bar bg-info" role="progressbar" style="width: 50%"
-													aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xl-3 col-md-6 mb-4">
-							<div class="card border-left-primary shadow h-100 py-2">
-								<div class="card-body">
-									<div class="row no-gutters align-items-center">
-										<div class="col mr-2">
-											<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
-												FINCAS
-											</div>
-										</div>
-										<div class="col-auto">
-											<a th:text="${totalPublicacionesFincas}"></a>
-											<div class="progress progress-sm mr-2">
-												<div class="progress-bar bg-info" role="progressbar" style="width: 50%"
-													aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xl-3 col-md-6 mb-4">
-							<div class="card border-left-primary shadow h-100 py-2">
-								<div class="card-body">
-									<div class="row no-gutters align-items-center">
-										<div class="col mr-2">
-											<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
-												LOCALES
-											</div>
-										</div>
-										<div class="col-auto">
-											<a th:text="${totalPublicacionesLocales}"></a>
-											<div class="progress progress-sm mr-2">
-												<div class="progress-bar bg-info" role="progressbar" style="width: 50%"
-													aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xl-3 col-md-6 mb-4">
-							<div class="card border-left-primary shadow h-100 py-2">
-								<div class="card-body">
-									<div class="row no-gutters align-items-center">
-										<div class="col mr-2">
-											<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
-												OFICINAS
-											</div>
-										</div>
-										<div class="col-auto">
-											<a th:text="${totalPublicacionesOficinas}"></a>
-											<div class="progress progress-sm mr-2">
-												<div class="progress-bar bg-info" role="progressbar" style="width: 50%"
-													aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-xl-3 col-md-6 mb-4">
-							<div class="card border-left-primary shadow h-100 py-2">
-								<div class="card-body">
-									<div class="row no-gutters align-items-center">
-										<div class="col mr-2">
-											<div class="text-xl font-weight-bold text-primary text-uppercase mb-1">
-												EDIFICIOS
-											</div>
-										</div>
-										<div class="col-auto">
-											<a th:text="${totalPublicacionesEdificios}"></a>
-											<div class="progress progress-sm mr-2">
-												<div class="progress-bar bg-info" role="progressbar" style="width: 50%"
-													aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						<!--container-fluid -->
 
 					</div>
-
-
-					<!-- Area Chart -->
-					<div id="carouselExample" class="carousel slide">
-						<div class="carousel-inner">
-							<div class="carousel-item active" th:each="Publicacion:${listarPublic}">
-								<img th:src="@{/imagenes/}+${Publicacion.Imagen}" alt="img"
-									class="bd-placeholder-img rounded img-fluid d-block w-100">
-							</div>
-						</div>
-						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-							data-bs-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Anterior</span>
-						</button>
-						<button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-							data-bs-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="visually-hidden">Siguiente</span>
-						</button>
-					</div>
-
-					<!--container-fluid -->
-
 				</div>
+
+				<!--Footer-->
+				<footer class="sticky-footer bg-white">
+					<div class="container my-auto">
+						<div class="copyright text-center my-auto">
+							<span>Copyright; MR 2024</span>
+						</div>
+					</div>
+				</footer>
+
+				<!-- End of Footer -->
 			</div>
-
-			<!--Footer-->
-			<footer class="sticky-footer bg-white">
-				<div class="container my-auto">
-					<div class="copyright text-center my-auto">
-						<span>Copyright; MR 2024</span>
-					</div>
-				</div>
-			</footer>
-			<!-- End of Footer -->
 		</div>
-	</div>
 </body>
-
-
 
 <!-- End of Content Wrapper -->
 </div>
-<!-- End of Page Wrapper -->
+
 <!-- Scroll to Top Button-->
 <a class="scroll-to-top rounded" href="#page-top">
 	<i class="fas fa-angle-up"></i>
 </a>
+
 <!-- Logout Modal-->
 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 	aria-hidden="true">
