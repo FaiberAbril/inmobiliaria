@@ -20,6 +20,14 @@ public class inicioControlador {
 	public String inicio(Model model) {
 		model.addAttribute("totalPublicaciones", contadorTotaldePublicaciones());
 		model.addAttribute("totalPublicacionesCasas", contadorPublicacionCasas());
+		model.addAttribute("totalPublicacionesHabitaciones", contadorPublicacionHabitaciones());
+		model.addAttribute("totalPublicacionesApartamentos", contadorPublicacionApartamentos());
+		model.addAttribute("totalPublicacionesLotes", contadorPublicacionLotes());
+		model.addAttribute("totalPublicacionesTerrenos", contadorPublicacionTerrenos());
+		model.addAttribute("totalPublicacionesFincas", contadorPublicacionFincas());
+		model.addAttribute("totalPublicacionesLocales", contadorPublicacionLocales());
+		model.addAttribute("totalPublicacionesOficinas", contadorPublicacionOficinas());
+		model.addAttribute("totalPublicacionesEdificios", contadorPublicacionEdificios());
 		return "inicio";
 	}
 
@@ -37,50 +45,50 @@ public class inicioControlador {
 
 	public int contadorPublicacionHabitaciones() {
 		List<Publicacion> Listapublica = publicServicio.listAll("HABITACIONES");
-		int contadorporHabitaciones = Listapublica.size();
-		return contadorporHabitaciones;
+		int contadorporhabitaciones = Listapublica.size();
+		return contadorporhabitaciones;
 	}
 
 	public int contadorPublicacionApartamentos() {
 		List<Publicacion> Listapublica = publicServicio.listAll("APARTAMENTOS");
-		int contadorporApartamanetos = Listapublica.size();
-		return contadorporApartamanetos;
+		int contadorporapartamanetos = Listapublica.size();
+		return contadorporapartamanetos;
 	}
 
 	public int contadorPublicacionLotes() {
 		List<Publicacion> Listapublica = publicServicio.listAll("LOTES");
-		int contadorporLotes = Listapublica.size();
-		return contadorporLotes;
+		int contadorporlotes = Listapublica.size();
+		return contadorporlotes;
 	}
 	
 	public int contadorPublicacionTerrenos() {
 		List<Publicacion> Listapublica = publicServicio.listAll("TERRENOS");
-		int contadorporTerrenos = Listapublica.size();
-		return contadorporTerrenos;
+		int contadorporterrenos = Listapublica.size();
+		return contadorporterrenos;
 	}
 	
 	public int contadorPublicacionFincas() {
 		List<Publicacion> Listapublica = publicServicio.listAll("FINCAS");
-		int contadorporFincas = Listapublica.size();
-		return contadorporFincas;
+		int contadorporfincas = Listapublica.size();
+		return contadorporfincas;
 	}
 	
 	public int contadorPublicacionLocales() {
 		List<Publicacion> Listapublica = publicServicio.listAll("lOCALES");
-		int contadorporLocales = Listapublica.size();
-		return contadorporLocales;
+		int contadorporlocales = Listapublica.size();
+		return contadorporlocales;
 	}
 	
 	public int contadorPublicacionOficinas() {
 		List<Publicacion> Listapublica = publicServicio.listAll("OFICINAS");
-		int contadorporOficinas = Listapublica.size();
-		return contadorporOficinas;
+		int contadorporoficinas = Listapublica.size();
+		return contadorporoficinas;
 	}
 	
 	public int contadorPublicacionEdificios() {
 		List<Publicacion> Listapublica = publicServicio.listAll("EDIFICIOS");
-		int contadorporEdificios = Listapublica.size();
-		return contadorporEdificios;
+		int contadorporedificios = Listapublica.size();
+		return contadorporedificios;
 	}
 	
 
