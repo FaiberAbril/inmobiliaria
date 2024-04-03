@@ -266,72 +266,101 @@
 							</div>
 
 
-
-							<!--Content Row -->
-
-							<div class="center">
-
-								<!-- Area Chart -->
-								<div class="card mb-4">
-									<div class="card">
-										<tbody>
-											<tr th:each="Publicacion:${listarPublic}"
-												th:if="${Publicacion.tipoLugar == 'LOTES'}">
-												<td>
-													<div class="card-body">
-														<div class="card text-center">
-
-															<div id="carouselExampleControls" class="carousel slide"
-																data-ride="carousel">
-																<div class="carousel-inner">
-																	<div class="carousel-item active">
-																		<img th:src="@{/imagenes/}+${Publicacion.Imagen}"
-																			class="d-block w-100" alt="primera imagen">
-																	</div>
-																</div>
-															</div>
-
-												</td>
-
-												<label for="formGroupExampleInput" class="form-label">
-
-													<td>
-
-														<p scope="row" th:text="${Publicacion.tipoLugar}"></p>
-														<p scope="row" th:text="${Publicacion.Descripcion}"></p>
-														<p scope="row" th:text="${Publicacion.direccion}"></p>
-														<P scope="row" th:text="${Publicacion.disponible}"></P>
-														<p scope="row" th:text="${Publicacion.medida}"></p>
-														<p scope="row" th:text="${Publicacion.precio}"></p>
-
-													</td>
-
-												</label>
+							<!-- Pending Requests Card Example -->
+							<div class="col-xl-3 col-md-6 mb-4">
+								<div class="card border-left-warning shadow h-100 py-2">
+									<div class="card-body">
+										<div class="row no-gutters align-items-center">
+											<div class="col mr-2">
+												<div class="text-xl font-weight-bold text-warning text-uppercase mb-1">
+													CREAR PUBLICACIÓN</div>
+											</div>
+											<div class="col-auto">
+												<a th:href="@{/PublicControlador/FormuCrearpublic}">
+													<i class="fas fa-comments fa-4x text-gray-300"></i>
+												</a>
+											</div>
+										</div>
 									</div>
-									</tr>
-									</tbody>
 								</div>
-
 							</div>
 						</div>
+
+						<!--Content Row -->
+
+						<div class="center">
+
+							<!-- Area Chart -->
+
+							<div class="card mb-4">
+								<div class="card-header py-3">
+									<h6 class="m-3 font-weight-bold text-primary">LOTES</h6>
+								</div>
+								<tbody>
+									<tr th:each="Publicacion:${listarPublic}"
+										th:if="${Publicacion.tipoLugar == 'LOTES'}">
+										<td>
+											<div class="card text-center">
+
+												<div id="carouselExampleControls" class="carousel slide"
+													data-ride="carousel">
+													<div class="carousel-inner">
+														<div class="carousel-item active">
+															<img th:src="@{/imagenes/}+${Publicacion.Imagen}"
+																class="d-block w-100" alt="primera imagen">
+														</div>
+													</div>
+												</div>
+										</td>
+
+										<br>
+
+										<p scope="row" th:text="${Publicacion.tipoLugar}"></p>
+										<label>
+											DESCRIPCIÓN
+											<p scope="row" th:text="${Publicacion.Descripcion}"></p>
+										</label>
+										<label>
+											DIRECCIÓN DE LA PROPIEDAD
+											<p scope="row" th:text="${Publicacion.direccion}"></p>
+										</label>
+										<label>
+											DISPONIBLE PARA
+											<P scope="row" th:text="${Publicacion.disponible}"></P>
+										</label>
+										<label>
+											MEDIDAS DE LA PROPIEDAD
+											<p scope="row" th:text="${Publicacion.medida}"></p>
+
+										</label>
+										<label>
+											PRECIO
+											<p scope="row" th:text="${Publicacion.precio}"></p>
+										</label>
+							</div>
+							</tr>
+							</tbody>
+						</div>
 					</div>
-					<!--container-fluid -->
+				</div>
+
+				<!--container-fluid -->
+			</div>
+		</div>
+		<!-- End of Main Content -->
+
+		<!--Footer-->
+		<footer class="sticky-footer bg-white">
+			<div class="container my-auto">
+				<div class="copyright text-center my-auto">
+					<span>Copyright; MR 2024</span>
 				</div>
 			</div>
-			<!-- End of Main Content -->
+		</footer>
+		<!-- End of Footer -->
 
-			<!--Footer-->
-			<footer class="sticky-footer bg-white">
-				<div class="container my-auto">
-					<div class="copyright text-center my-auto">
-						<span>Copyright; MR 2023</span>
-					</div>
-				</div>
-			</footer>
-			<!-- End of Footer -->
-
-		</div>
-		<!-- End of Content Wrapper -->
+	</div>
+	<!-- End of Content Wrapper -->
 
 	</div>
 	<!-- End of Page Wrapper -->
