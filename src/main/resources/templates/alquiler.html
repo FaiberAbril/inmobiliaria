@@ -104,7 +104,7 @@
 
 			<!-- Nav Item - Tables -->
 			<li class="nav-item">
-				<a class="nav-link" th:href="@{/AdministrarPrincipal}">
+				<a class="nav-link" th:href="@{/PublicControlador/}">
 					<i class="fas fa-fw fa-table"></i>
 					<span>PUBLICACIONES</span></a>
 			</li>
@@ -249,7 +249,7 @@
 													PUBLICACIONES</div>
 											</div>
 											<div class="col-auto">
-												<a th:href="@{/AdministrarPrincipal}">
+												<a th:href="@{/PublicControlador/}">
 													<i class="fas fa-fw fa-table fa-4x text-gray-400"></i>
 												</a>
 											</div>
@@ -285,7 +285,7 @@
 							</div>
 							<tbody>
 								<tr th:each="Publicacion:${listarPublic}"
-									th:if="${Publicacion.tipoLugar == 'ALQUILER'}">
+									th:if="${Publicacion.disponible == 'ALQUILER'}">
 									<td>
 										<div class="card text-center">
 

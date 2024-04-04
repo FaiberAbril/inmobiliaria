@@ -42,7 +42,7 @@ public class PublicControlador {
 	
 	@GetMapping("/")
 	public String AdministrarPubli(Model model, @Param("palabraClave") String palabraClave) {
-		List<Publicacion> Listapublica = publicServicio.listAll(palabraClave);
+		List<Publicacion> Listapublica = publicServicio.listarPublicaciones();
 		model.addAttribute("listarPublic", Listapublica);
 		model.addAttribute("palabraClave", palabraClave);
 

@@ -104,11 +104,6 @@
 
 			<!-- Nav Item - Tables -->
 			<li class="nav-item">
-				<a class="nav-link" th:href="@{/AdministrarPrincipal}">
-					<i class="fas fa-fw fa-table"></i>
-					<span>PUBLICACIONES</span></a>
-			</li>
-			<li class="nav-item">
 				<a class="nav-link" th:href="@{/PublicControlador/FormuCrearpublic}">
 					<i class="fas fa-fw fa-table"></i>
 					<span>CREAR PUBLICACIÓN</span></a>
@@ -290,7 +285,7 @@
 									<h6 class="m-3 font-weight-bold text-primary">PUBLICACIONES</h6>
 								</div>
 								<tbody>
-									<tr th:each="Publicacion:${listarPublic}"	>
+									<tr th:each="Publicacion:${listarPublic}">
 										<td>
 											<div class="card text-center">
 
